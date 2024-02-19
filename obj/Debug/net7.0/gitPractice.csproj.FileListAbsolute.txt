@@ -1,0 +1,14 @@
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.AssemblyInfoInputs.cache
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.AssemblyInfo.cs
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.csproj.CoreCompileInputs.cache
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\bin\Debug\net7.0\gitPractice.exe
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\bin\Debug\net7.0\gitPractice.deps.json
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\bin\Debug\net7.0\gitPractice.runtimeconfig.json
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\bin\Debug\net7.0\gitPractice.dll
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\bin\Debug\net7.0\gitPractice.pdb
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.dll
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\refint\gitPractice.dll
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.pdb
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\gitPractice.genruntimeconfig.cache
+C:\Users\jakub\Desktop\oop3 with git\gitPractice\obj\Debug\net7.0\ref\gitPractice.dll
