@@ -10,6 +10,15 @@ namespace ContactManagementSystem
         private readonly string filePath = "contacts.json";
         public List<Contact> LoadContacts()
         {
+            string jsonText = File.ReadAllText(filePath);
+            dynamic data = JsonConvert.DeserializeObject(jsonText);
+            //example: string message = data.message;
+            // message: "hi"
+            foreach (var item in data)
+            {
+                var data.user
+            }
+
             // Load contacts from JSON file if exists, else return new list
             // Use JsonSerializer.Deserialize to convert JSON string to List<Contact>
             throw new NotImplementedException();
