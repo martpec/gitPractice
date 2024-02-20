@@ -2,7 +2,7 @@ namespace ContactManagementSystem
 {
     public class Contact
     {
-        private int ID;
+        public int ID;
         private string name;
         private string mail;
         private string phoneNumber;
@@ -12,6 +12,40 @@ namespace ContactManagementSystem
             this.ID = ID;
             this.name = name;
             this.mail = mail;
+            this.phoneNumber = phoneNumber;
+        }
+
+        public int getID()
+        {
+            return ID;
+        }
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public string getEmail()
+        {
+            return mail;
+        }
+
+        public string getPhoneNumber()
+        {
+            return phoneNumber;
+        }
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
+        public void setEmail(string mail)
+        {
+            this.mail = mail;
+        }
+
+        public void setPhoneNumber(string phoneNumber)
+        {
             this.phoneNumber = phoneNumber;
         }
     }
