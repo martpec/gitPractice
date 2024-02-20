@@ -2,17 +2,20 @@ namespace ContactManagementSystem
 {
     public class ContactBook
     {
-        private readonly List<Contact> contacts = new();
+        public readonly List<Contact> contacts = new();
 
         private int id = 0;
         // Implement methods for managing contacts (add, view, update, delete)
 
         public void ViewContacts()
         {
+            int xd = 0;
             foreach (var contact in contacts)
             {
+                xd++;
                 Console.WriteLine($"Id:{contact.getID()}\nName: {contact.getName()}\nMail: {contact.getEmail()}\nPhone: {contact.getPhoneNumber()}\n");
             }
+            Console.WriteLine($"I found {xd} contacts.");
         }
 
         public void UpdateContact()
@@ -63,11 +66,6 @@ namespace ContactManagementSystem
                     {
                         return contact;
                     }
-                    else
-                    {
-                        Console.WriteLine("There is no contact with this ID.");
-                        return null;
-                    }
                 }
             }
             else
@@ -75,6 +73,7 @@ namespace ContactManagementSystem
                 Console.WriteLine("This isn't a int you dumbass.");
                 return null;
             }
+            Console.WriteLine("Noone found.");
             return null;
         }
 
@@ -91,14 +90,12 @@ namespace ContactManagementSystem
             Console.WriteLine();
 
             if(name != null && email != null && phoneNumber != null)
-            {
+            {//check id
                 Contact newContact = new Contact(id, name, email, phoneNumber);
                 contacts.Add(newContact);
                 id++;
             }
         }
-
-
 
         public void Delete()
         {

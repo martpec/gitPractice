@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             //Initialize new FileContactStorage and ContactBook.
+            FileContactStorage fcs = new();
+            ContactBook cb = new();
 
-
+            fcs.LoadContacts();
             // Implement user interaction loop here:
             // Display menu options, take user input, and call corresponding ContactBook methods
             while (true)
@@ -24,19 +26,24 @@
                 switch (option)
                 {
                     case "1":
-                        // Add contact flow
+                        cb.Add();
                         break;
                     case "2":
-                        // View contacts flow
+                        cb.ViewContacts();
                         break;
                     case "3":
-                        // Update contact flow
+                        cb.UpdateContact();
                         break;
                     case "4":
-                        // Delete contact flow
+                        cb.Delete();
                         break;
                     case "5":
-                        // Exit application
+                        Console.WriteLine("\n\n\n\n\nTolko kontaktov mame:");
+                        foreach (var contact in cb.contacts)
+                        {
+                            Console.WriteLine($"Id:{contact.getID()}\nName: {contact.getName()}\nMail: {contact.getEmail()}\nPhone: {contact.getPhoneNumber()}\n");
+                        }
+                        fcs.SaveContacts(cb.contacts);
                         Console.WriteLine("Exiting application...");
                         return;
                     default:
@@ -44,6 +51,7 @@
                         break;
                 }
             }
+
         }
     }
 

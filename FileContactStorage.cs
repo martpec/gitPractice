@@ -7,30 +7,31 @@ namespace ContactManagementSystem
 {
     public class FileContactStorage : IContactStorage
     {
-        private readonly string filePath = "contacts.json";
+        private readonly string filePath = "./contacts.json";
         public List<Contact> LoadContacts()
         {
-            //string jsonText = File.ReadAllText(filePath);
-            //dynamic data = JsonConvert.DeserializeObject(jsonText);
-            //example: string message = data.message;
-            // message: "hi"
-            /*foreach (var item in data)
-            {
-                var data.user
-            }*/
             if (File.Exists(filePath))
-            {
-                var json = File.ReadAllText(filePath);
-                return JsonSerializer.Deserialize<List<Contact>>(json);
-            }
-            else
-            {
-                return new List<Contact>();
-            }
-
-            // Load contacts from JSON file if exists, else return new list
-            // Use JsonSerializer.Deserialize to convert JSON string to List<Contact>
-            throw new NotImplementedException();
+    {
+        var json = File.ReadAllText(filePath);
+        if (string.IsNullOrWhiteSpace(json))
+        {
+            // File is empty, return a new list
+            return new List<Contact>();
+        }
+        try
+        {
+            return JsonSerializer.Deserialize<List<Contact>>(json);
+        }
+        catch (JsonException)
+        {
+            // JSON is not properly formatted, return a new list
+            return new List<Contact>();
+        }
+    }
+    else
+    {
+        return new List<Contact>();
+    }
         }
 
         public void SaveContacts(List<Contact> contacts)
@@ -42,9 +43,6 @@ namespace ContactManagementSystem
 
             var json = JsonSerializer.Serialize(contacts, options);
             File.WriteAllText(filePath, json);
-            // Save contacts to JSON file
-            // Use JsonSerializer.Serialize with WriteIndented option for pretty print
-            throw new NotImplementedException();
         }
     }
 }
