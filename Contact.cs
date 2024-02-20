@@ -2,7 +2,7 @@ namespace ContactManagementSystem
 {
     public class Contact
     {
-        public int ID;
+        private int ID;
         private string name;
         private string mail;
         private string phoneNumber;

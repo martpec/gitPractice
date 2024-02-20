@@ -59,7 +59,7 @@ namespace ContactManagementSystem
             {
                 foreach (Contact contact in contacts) //why this doesn't work ?
                 {
-                    if (contact.ID == contactID)
+                    if (contact.getID() == contactID)
                     {
                         return contact;
                     }
